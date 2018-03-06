@@ -5,16 +5,6 @@ import numpy as np
 from math import sqrt
 from exo1_1 import Cholesky 
 
-A = np.random.rand(3,3)
-A = A.dot(np.transpose(A))
-print(A)
-
-B = Cholesky(A)
-
-D = np.transpose(np.linalg.inv(B)).dot(np.linalg.inv(B))
-
-condA = np.linalg.cond(A)
-cond = np.linalg.cond(D.dot(A))
 
 def grad_conj_prec(A, b):
 	'''implémente la méthode du gradient conjugué avec préconditionneur'''
