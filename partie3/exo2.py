@@ -42,10 +42,6 @@ t = time()
 T = spsolve(LAP2,f2) #résolution du système linéaire
 print('temps sparse=' ,time()-t)
 
-# In order to compare with the full resolution
-#LAP2full=LAP2.todense()
-#t=time(); T2=np.linalg.solve(LAP2full,f2); print 'temps full=',time()-t
-
 # Résultat
 plt.pcolormesh(xx,yy,T.reshape(N,N), shading='flat')
 plt.axis('image')
