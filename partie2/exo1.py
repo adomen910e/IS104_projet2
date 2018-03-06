@@ -3,15 +3,15 @@
 
 
 function [x] = conjgrad(A,b,x)
-    r = b - A * x;
+    r = b - (A * x);
     p = r;
     rsold = r' * r;
  
     for i = 1:length(b)
         Ap = A * p;
         alpha = rsold / (p' * Ap);
-        x += alpha * p;
-        r -= alpha * Ap;
+        x = x + (alpha * p);
+        r = r - (alpha * Ap);
         rsnew = r' * r;
 
         if sqrt(rsnew) < 1e-10
