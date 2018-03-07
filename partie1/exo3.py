@@ -70,7 +70,7 @@ def test_est_definie_positive (A) :
         
 
 
-A= generer_matrice(10,10,1000);
+A= generer_matrice(5,5,1000);
 print(A)
 print(np.linalg.det(A))
 bool=True
