@@ -9,6 +9,7 @@ def test():
     A = np.random.rand(3,3)
     A = A.dot(np.transpose(A))
     print(A)
+    print("\n")
 
     B = Cholesky(A)
 
@@ -19,5 +20,7 @@ def test():
     condA = np.linalg.cond(A)
     cond = np.linalg.cond(D.dot(A))
     print(cond, condA)
+    print("\n")
     #assert(cond < condA)
     print(cond/condA)
+    print("\n")
