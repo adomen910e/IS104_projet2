@@ -38,7 +38,6 @@ def incomplete_cholesky(A):
 	return T
 
 
-'''pas encore fait les tests, mais ça doit marcher avec les memes matrices que l'exo1'''
 def test_incomplete() :
         '''test l'algorithme de Cholesky (version incomplete)'''
         A = np.array([[1,2,3],[2,5,2],[3,2,25]])

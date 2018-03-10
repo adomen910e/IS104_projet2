@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 from random import *
 from math import *
@@ -6,10 +9,7 @@ import numpy.linalg as alg
 
 
 
-
-
 def generer_matrice(n,p, borne):
-    
     k=randint(0,n-1)
     l=randint(0,n-1)
     compteur=0        #compte le nbr de cases hors de la diagonale déjà remplies
@@ -42,11 +42,12 @@ def test_postivite(A):
             return False
         
     return True
-    
+
+
+
 def test_inversibilite(A):
-    
     if np.linalg.det(A) == 0:
-        print("matrice non inversible deterinant nul")
+        print("matrice non inversible determinant nul")
         return False
     else:
         print("test_inversibilite ok " )
@@ -59,15 +60,6 @@ def test_est_definie_positive (A) :
         return True
     return False
     
-    
-    
-
-    
-    
-
-        
-        
-        
 
 
 A= generer_matrice(5,5,1000);
@@ -76,9 +68,3 @@ print(np.linalg.det(A))
 bool=True
 bool=test_est_definie_positive(A)
 print(bool)
-
-
-    
-
-
-
