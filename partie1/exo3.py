@@ -61,10 +61,10 @@ def test_est_definie_positive (A) :
     return False
     
 
-
-A= generer_matrice(5,5,1000);
-print(A)
-print(np.linalg.det(A))
-bool=True
-bool=test_est_definie_positive(A)
-print(bool)
+def test():
+    A= generer_matrice(5,8,30);
+    print(A)
+    print(np.linalg.det(A))
+    bool=True
+    bool=test_est_definie_positive(A)
+    print(bool)
