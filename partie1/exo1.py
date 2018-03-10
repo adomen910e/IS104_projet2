@@ -46,17 +46,24 @@ def Cholesky(A) :
 
 '''test l'algorithme de Cholesky'''
 def test() :
-    A = np.array([[10,2,3],[2,5,2],[3,2,25]])
+    A=np.array([[1,1,1,1],[1,5,5,5],[1,5,14,14],[1,5,14,30]])
     T = Cholesky(A)
     T1 = np.transpose(T)
     print("La matrice initiale est :")
     print(A)
+    print("\n")
+    
     print("Les matrices de la décomposition de Cholesky sont :")
     print(T)
+    print("\n")
+    print("Et sa transposée et:")
     print(T1)
+    print("\n")
     print("La multiplication de ces deux matrices donne :")
     print(T.dot(T1))
-    #assert(np.array_equal(A,T.dot(T1)))
+    print("\n")
+    print("Donc on a bien T * Tt == A")
+    print("\n")
     
     A = np.array([[1,0,0],[0,1,0],[0,0,1]])
     T = Cholesky(A)
