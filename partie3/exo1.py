@@ -16,8 +16,9 @@ def mat_chaleur(N):
         if(i+N < n):
             A[i+N, i] = 1
             A[i, i+N] = 1
-    h = 1/(N+1)
-    return A/(h*h)
+# h = 1/(N+1)
+#   return A/(h*h)
+    return A
 
 #linearise une matrice en un vecteur colonne
 def mat_linear(T):
@@ -39,8 +40,12 @@ def chaleur(T):
         
 A = np.array([[2,1],[3,5]])
 print(A.shape)
+print("\n")
 print(mat_chaleur(1))
+print("\n")
 print(mat_chaleur(2))
+print("\n")
 print(mat_chaleur(3))
+print("\n")
 print(mat_linear(A))
 
