@@ -1,5 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
-#from ../partie1/exo1 import *
+
 
 def conjugate_grad(A, b, x):
     r = b-np.dot(A, x)
@@ -19,34 +22,41 @@ def conjugate_grad(A, b, x):
     return x
 
 def test():
-
-    print("\n\n\n")
-    print("Tests de la methode du gradient conjugué\n\n")
+    print("\nTest de la methode du gradient conjugue\n")
     x0 = np.zeros((2,1))
     A= np.array([[1, 0], [0,1]])
     b= np.array([[1],[42]])
-    print("A=\n", A)
-    print("\nExpected:\n", b)
-    print("\nGot:\n", A.dot(conjugate_grad(A, b, x0)))
-    print("---------------------------------------\n\n\n")
+    print("A=")
+    print(A)
+    print("\nExpected:")
+    print(b)
+    print("\nGot:")
+    print(A.dot(conjugate_grad(A, b, x0)))
+    print("---------------------------------------\n")
 
     x0 = np.zeros((3,1))
     
     A = np.array([[8,0,0],[0,5,0],[0,0,11]])
     b= np.array([[1],[42],[21]])
-    print("A=\n", A)
-    print("\nExpected:\n", b)
-    print("\nGot:\n", A.dot(conjugate_grad(A, b, x0)))
-    print("---------------------------------------\n\n\n")
+    print("A=")
+    print(A)
+    print("\nExpected:")
+    print(b)
+    print("\nGot:")
+    print(A.dot(conjugate_grad(A, b, x0)))
+    print("---------------------------------------\n")
 
     #matrice a diagonale dominante
     
     A = np.array([[10,2,3],[2,5,2],[3,2,25]])
     b= np.array([[-4],[8],[11.5]])
-    print("A=\n", A)
-    print("\nExpected:\n", b)
-    print("\nGot:\n", A.dot(conjugate_grad(A, b, x0)))
-    print("---------------------------------------\n\n\n")
+    print("A=")
+    print(A)
+    print("\nExpected:")
+    print(b)
+    print("\nGot:")
+    print(A.dot(conjugate_grad(A, b, x0)))
+    print("---------------------------------------\n")
     print("Fin des tests")
     return 0
 
